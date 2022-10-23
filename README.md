@@ -44,11 +44,11 @@ Apply various supervised machine learning algorithms and resampling to solve a r
     Undersampling is another technique to address class imbalance. 
     Instead of increasing the number of the minority class, the size of the majority class is decreased.
     
-   ![ClusterCentroids_Undersample](https://user-images.githubusercontent.com/107228424/196053799-71e9d6dc-92e8-42bb-8a21-0b7161c6b36e.jpg)
+   !![image](https://user-images.githubusercontent.com/107228424/197423999-09bfe603-31e9-4dbf-ba06-74f69e877452.png)
 
 
-    ClusterCentroids Undersampling Observations:  Similar results to the 2 oversampling methods
-      Balanced Accuracy scores indicates:  .66076 which does not lead me to recommend this model as worked
+    ClusterCentroids Undersampling Observations:  Lower results than the 2 oversampling methods
+      Balanced Accuracy scores indicates:  .544237 which does not lead me to recommend this model as worked
 
       Recall/sensitivity value of .69 for the high risk class is lower than oversampling models and okay
 
@@ -64,11 +64,11 @@ Apply various supervised machine learning algorithms and resampling to solve a r
     to two different classes, that data point is dropped.
 
     
-   ![SMOTEEN_OverUnder](https://user-images.githubusercontent.com/107228424/196053829-c61bff83-e68b-46d4-8922-f8a6acf61604.jpg)
-    
+   !![image](https://user-images.githubusercontent.com/107228424/197424078-7dbafbf4-aaa2-430a-b054-5d092794a0c5.png)
 
+    
     SMOTEEN Combinatorial Observations:  Accuracy score lower than the under and over sampling methods
-      Balanced Accuracy scores indicates:  .5442 which does not lead me to recommend this model as worked
+      Balanced Accuracy scores indicates:  .544237 which does not lead me to recommend this model as worked
 
       Recall/sensitivity value of .74 for the high risk class is higher than oversampling and undersampling models
 
@@ -94,14 +94,21 @@ robustness, as well as decrease variance of the model, and therefore increase th
     
   # EasyEnsembleClassifier
   
+   ![image](https://user-images.githubusercontent.com/107228424/197424141-a158e104-8c2e-4147-a534-4027830ebead.png)
+    
+    EasyEnsemble Observations:  Much lower accuracy scorethan the BalancedRandom Forest.
+      Balanced Accuracy scores indicates: a not confident building score of .683022
+  
+      Recall/sensitivity value of .37 for the high risk class which is lower than oversampling and undersampling models
 
+      The Precision for the high-risk loans (minor class) is .88 which is much higher than the other models. 
 
 # DELIVERABLE 4: SUMMARY OF RESULTS 
 
     F1 Scores for the Oversampling, Undersampling and Combinatorial methods were very low at .01 - .02 for high-risk loans class.
     F1 Score for BalancedRandomForest was much better at .52 which indicates a better balance between precision and sensitivity.
     
-    Precision for the best using the BalancedRandomForestEnsemble method.  
+    Precision for the best using the BalancedRandomForestEnsemble method and EasyEnsemble methods.  
     
     Recommendation: I would recommend using the BalancedRandomForest Ensemble method since I believe precision in more important than 
     sensitivity for this application.  It's precision score is good (better than the other methods), and it's Accuracy and F1 scores 
